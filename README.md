@@ -34,3 +34,45 @@ Endpoint:
 ```txt
 https://jsonplaceholder.typicode.com/todos/1
 ```
+
+## Setup Instructions
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/urimrxh/react-native-todo-task-app.git
+cd pritech-react-native-task
+```
+
+2. Install dependencies:
+
+- npm install
+
+3. Start the project:
+
+- npx expo start
+
+4. Run on a device or emulator:
+
+- Scan the QR code using Expo Go
+- Or run on Android/iOS emulator
+
+## Project Structure
+
+src/
+components/
+context/
+hooks/
+navigation/
+screens/
+services/
+types/
+utils/
+
+## Implementation Notes
+
+- The app uses a shared TasksContext to manage task state across screens.
+  Tasks are saved locally using AsyncStorage so they remain available after the app is closed.
+  Search and filter logic is handled through a custom useTasks hook to keep the screen components clean.
+
+## Screenshots
