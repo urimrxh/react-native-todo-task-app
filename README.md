@@ -34,3 +34,12 @@ Endpoint:
 ```txt
 https://jsonplaceholder.typicode.com/todos/1
 ```
+
+## Setup Instructions
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/urimrxh/react-native-todo-task-app.git
+cd pritech-react-native-task
+```
