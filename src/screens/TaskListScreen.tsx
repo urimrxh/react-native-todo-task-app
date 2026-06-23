@@ -1,12 +1,12 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import {
-    ActivityIndicator,
-    FlatList,
-    Pressable,
-    StyleSheet,
-    Text,
-    TextInput,
-    View,
+  ActivityIndicator,
+  FlatList,
+  Pressable,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from "react-native";
 
 import EmptyState from "../components/EmptyState";
@@ -43,6 +43,7 @@ const TaskListScreen = ({ navigation }: Props) => {
       <TextInput
         style={styles.searchInput}
         placeholder="Search tasks by title..."
+        placeholderTextColor="#6B7280"
         value={searchQuery}
         onChangeText={setSearchQuery}
       />
@@ -101,6 +102,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     marginBottom: 12,
     fontSize: 15,
+    color: "#111827",
   },
   listContent: {
     paddingBottom: 90,
@@ -124,6 +126,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor: "#F9FAFB",
   },
   loadingText: {
     marginTop: 12,

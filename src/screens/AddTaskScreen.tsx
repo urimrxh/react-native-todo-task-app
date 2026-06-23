@@ -1,12 +1,12 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { useState } from "react";
 import {
-    Alert,
-    Pressable,
-    StyleSheet,
-    Text,
-    TextInput,
-    View,
+  Alert,
+  Pressable,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from "react-native";
 
 import { useTasksContext } from "../context/TasksContext";
@@ -59,13 +59,10 @@ const AddTaskScreen = ({ navigation }: Props) => {
       <Text style={styles.label}>Title</Text>
 
       <TextInput
-        style={[styles.input, titleError && styles.inputError]}
-        placeholder="Enter task title"
+        style={styles.input}
+        placeholderTextColor="#6B7280"
         value={title}
-        onChangeText={(value) => {
-          setTitle(value);
-          setTitleError("");
-        }}
+        onChangeText={setTitle}
       />
 
       {!!titleError && <Text style={styles.errorText}>{titleError}</Text>}
@@ -75,6 +72,7 @@ const AddTaskScreen = ({ navigation }: Props) => {
       <TextInput
         style={[styles.input, styles.descriptionInput]}
         placeholder="Enter short description"
+        placeholderTextColor="#6B7280"
         value={description}
         onChangeText={setDescription}
         multiline
@@ -123,6 +121,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 12,
     fontSize: 15,
+    color: "#111827",
   },
   inputError: {
     borderColor: "#DC2626",

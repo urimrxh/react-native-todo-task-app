@@ -166,6 +166,7 @@ const styles = StyleSheet.create({
   notFoundTitle: {
     fontSize: 20,
     fontWeight: "700",
+    color: "#111827",
     marginBottom: 16,
   },
 });
