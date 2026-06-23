@@ -76,3 +76,35 @@ utils/
   Search and filter logic is handled through a custom useTasks hook to keep the screen components clean.
 
 ## Screenshots
+
+### Start screen / Tasks Tabs
+
+<p>
+<img src="assets/images/screenshots/all-tasks-tab.png" width="220" />
+<img src="assets/images/screenshots/active-tasks-tab.png" width="220" />
+<img src="assets/images/screenshots/completed-tasks-tab.png" width="220" />
+</p>
+
+### Add Task
+
+<p>
+<img src="assets/images/screenshots/add-task-screen.png" width="220" />
+</p>
+
+### Task Details
+
+<p>
+<img src="assets/images/screenshots/task-details-screen.png" width="220" />
+</p>
+
+### No Tasks Found On Search
+
+<p>
+<img src="assets/images/screenshots/no-tasks-found.png" width="220" />
+</p>
+
+### Settings
+
+<p>
+<img src="assets/images/screenshots/settings-screen.png" width="220" />
+</p>

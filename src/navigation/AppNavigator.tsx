@@ -28,7 +28,7 @@ const AppNavigator = () => {
           name="TaskList"
           component={TaskListScreen}
           options={({ navigation }) => ({
-            title: "Pritech Tasks",
+            title: "Todo Tasks App",
             headerRight: () => (
               <Pressable onPress={() => navigation.navigate("Settings")}>
                 <Text
