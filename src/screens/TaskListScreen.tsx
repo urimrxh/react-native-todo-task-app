@@ -40,13 +40,24 @@ const TaskListScreen = ({ navigation }: Props) => {
 
   return (
     <View style={styles.container}>
-      <TextInput
-        style={styles.searchInput}
-        placeholder="Search tasks by title..."
-        placeholderTextColor="#6B7280"
-        value={searchQuery}
-        onChangeText={setSearchQuery}
-      />
+      <View style={styles.searchContainer}>
+        <TextInput
+          style={[styles.searchInput, { outlineStyle: "none" } as any]}
+          placeholder="Search tasks by title..."
+          placeholderTextColor="#6B7280"
+          value={searchQuery}
+          onChangeText={setSearchQuery}
+        />
+
+        {searchQuery.length > 0 && (
+          <Pressable
+            style={styles.clearButton}
+            onPress={() => setSearchQuery("")}
+          >
+            <Text style={styles.clearButtonText}>×</Text>
+          </Pressable>
+        )}
+      </View>
 
       <FilterTabs
         selectedFilter={filterStatus}
@@ -93,16 +104,34 @@ const styles = StyleSheet.create({
     backgroundColor: "#F9FAFB",
     padding: 16,
   },
-  searchInput: {
+  searchContainer: {
+    flexDirection: "row",
+    alignItems: "center",
     backgroundColor: "#FFFFFF",
     borderWidth: 1,
-    borderColor: "#E5E7EB",
+    borderColor: "#D1D5DB",
     borderRadius: 12,
-    paddingHorizontal: 14,
-    paddingVertical: 12,
     marginBottom: 12,
+    paddingHorizontal: 14,
+  },
+  searchInput: {
+    flex: 1,
+    paddingVertical: 12,
     fontSize: 15,
     color: "#111827",
+  },
+  clearButton: {
+    width: 28,
+    height: 28,
+    borderRadius: 14,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  clearButtonText: {
+    fontSize: 24,
+    fontWeight: "600",
+    lineHeight: 26,
+    color: "#6B7280",
   },
   listContent: {
     paddingBottom: 90,
