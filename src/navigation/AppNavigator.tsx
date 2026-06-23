@@ -1,7 +1,9 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { Pressable, Text } from "react-native";
 
 import AddTaskScreen from "../screens/AddTaskScreen";
+import SettingsScreen from "../screens/SettingsScreen";
 import TaskDetailsScreen from "../screens/TaskDetailsScreen";
 import TaskListScreen from "../screens/TaskListScreen";
 import { RootStackParamList } from "./types";
@@ -25,7 +27,18 @@ const AppNavigator = () => {
         <Stack.Screen
           name="TaskList"
           component={TaskListScreen}
-          options={{ title: "Pritech Tasks" }}
+          options={({ navigation }) => ({
+            title: "Pritech Tasks",
+            headerRight: () => (
+              <Pressable onPress={() => navigation.navigate("Settings")}>
+                <Text
+                  style={{ color: "#FFFFFF", fontSize: 22, paddingRight: 16 }}
+                >
+                  ⚙️
+                </Text>
+              </Pressable>
+            ),
+          })}
         />
 
         <Stack.Screen
@@ -38,6 +51,12 @@ const AppNavigator = () => {
           name="TaskDetails"
           component={TaskDetailsScreen}
           options={{ title: "Task Details" }}
+        />
+
+        <Stack.Screen
+          name="Settings"
+          component={SettingsScreen}
+          options={{ title: "Settings" }}
         />
       </Stack.Navigator>
     </NavigationContainer>
